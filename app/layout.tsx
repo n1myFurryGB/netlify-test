@@ -21,7 +21,6 @@ export default function RootLayout({
                     {children}
                 </main>
                 <Footer />
-                Hello World
             </body>
         </html>
     )
