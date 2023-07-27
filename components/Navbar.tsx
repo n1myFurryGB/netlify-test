@@ -29,7 +29,7 @@ const Navbar = async () => {
                 ))}
             </ul>
         </div> */}
-        {/* <div className="flexCenter gap-4">
+        <div className="flexCenter gap-4">
             {session?.user ? (
                 <>
                     <ProfileMenu session={session} />
@@ -40,7 +40,7 @@ const Navbar = async () => {
             ) : (
                 <AuthProviders />
             )}
-        </div> */}
+        </div>
     </nav>
   )
 }
