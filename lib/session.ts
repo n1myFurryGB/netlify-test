@@ -10,8 +10,8 @@ import { createUser, getUser } from './actions';
 export const authOptions: NextAuthOptions = {
     providers: [
         GoogleProvider({
-            clientId: process.env.GOOGLE_CLIENT_ID!,
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET!
+            clientId: '415110040833-d5fsmtghmk5jm8dk0p95buefkrt9jj5p.apps.googleusercontent.com',
+            clientSecret: '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'
         })
     ],
     jwt: {
