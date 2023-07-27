@@ -8,11 +8,11 @@ import ProfileMenu from './ProfileMenu';
 
 const Navbar = async () => {
 
-    const session = await getCurrentUser();
+    //const session = await getCurrentUser();
 
   return (
     <nav className="flexBetween navbar">
-        <div className="flex-1 flexStart gap-10">
+        {/* <div className="flex-1 flexStart gap-10">
             <Link href="/">
                 <Image
                     src="/logo.svg"
@@ -28,7 +28,7 @@ const Navbar = async () => {
                     </Link>
                 ))}
             </ul>
-        </div>
+        </div> */}
         {/* <div className="flexCenter gap-4">
             {session?.user ? (
                 <>
