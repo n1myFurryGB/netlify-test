@@ -8,6 +8,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "exports": {
+    "./v4": "./lib/v4.js"
+  },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
     "@types/jsonwebtoken": "^9.0.2",
