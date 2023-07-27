@@ -3,9 +3,9 @@ import { createProjectMutation, createUserMutation, deleteProjectMutation, getPr
 import { GraphQLClient } from "graphql-request";
 
 const isProduction = process.env.NODE_ENV === "production";
-const apiUrl = isProduction ? process.env.NEXT_PUBLIC_GRAFBASE_API_URL || '' : "http://127.0.0.1:4000/graphql";
-const apiKey = isProduction ? process.env.NEXT_PUBLIC_GRAFBASE_API_KEY || '' : 'lmin';
-const serverUrl = isProduction ? process.env.NEXTAUTH_URL : "http://localhost:3000";
+const apiUrl = 'https://graphbaseflexibble-main-kilin2003-yandexru.grafbase.app/graphql';
+const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTAyMTIzODAsImlzcyI6ImdyYWZiYXNlIiwiYXVkIjoiMDFINjQ4NEJEOUhWMjBZOEs0Sk5TTTRTRUQiLCJqdGkiOiIwMUg2NDg0QlNYSlo5MTcwWEE2QzA3R1JRUiIsImVudiI6InByb2R1Y3Rpb24iLCJwdXJwb3NlIjoicHJvamVjdC1hcGkta2V5In0.s4Y5Q9wGnQD6gSre_EewVHJlqv2jwsdVU2x1UDZumu0';
+const serverUrl = 'https://bespoke-maamoul-cff1bd.netlify.app/';
 
 const client = new GraphQLClient(apiUrl);
 
