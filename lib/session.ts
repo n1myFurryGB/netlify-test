@@ -9,10 +9,10 @@ import { createUser, getUser } from './actions';
 
 export const authOptions: NextAuthOptions = {
     providers: [
-        GoogleProvider({
-            clientId: '415110040833-d5fsmtghmk5jm8dk0p95buefkrt9jj5p.apps.googleusercontent.com',
-            clientSecret: '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'
-        })
+        // GoogleProvider({
+        //     clientId: '415110040833-d5fsmtghmk5jm8dk0p95buefkrt9jj5p.apps.googleusercontent.com',
+        //     clientSecret: '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'
+        // })
     ],
     jwt: {
         encode: ({ secret, token }) => {
@@ -30,7 +30,7 @@ export const authOptions: NextAuthOptions = {
     },
     theme: {
         colorScheme: 'light',
-        logo: ''
+        logo: 'logo.svg'
     },
     callbacks: {
         async session({ session }) {
