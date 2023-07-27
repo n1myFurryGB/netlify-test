@@ -8,12 +8,12 @@ import { SessionInterface, UserProfile } from '@/common.types';
 import { createUser, getUser } from './actions';
 
 export const authOptions: NextAuthOptions = {
-    providers: [
-        GoogleProvider({
-            clientId: process.env.GOOGLE_CLIENT_ID!,
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET!
-        })
-    ],
+    // providers: [
+    //     GoogleProvider({
+    //         clientId: process.env.GOOGLE_CLIENT_ID!,
+    //         clientSecret: process.env.GOOGLE_CLIENT_SECRET!
+    //     })
+    // ],
     jwt: {
         encode: ({ secret, token }) => {
             const encodedToken = jsonwebtoken.sign({
