@@ -2,10 +2,10 @@ import { getServerSession } from 'next-auth/next';
 import { AuthOptions, User } from 'next-auth';
 import { AdapterUser } from "next-auth/adapters";
 import GoogleProvider from 'next-auth/providers/google';
-import jsonwebtoken from 'jsonwebtoken';
-import { JWT } from 'next-auth/jwt';
-import { SessionInterface, UserProfile } from '@/common.types';
-import { createUser, getUser } from './actions';
+// import jsonwebtoken from 'jsonwebtoken';
+// import { JWT } from 'next-auth/jwt';
+// import { SessionInterface, UserProfile } from '@/common.types';
+// import { createUser, getUser } from './actions';
 
 export const authOptions: AuthOptions = {
     providers: [
