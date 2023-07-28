@@ -9,10 +9,10 @@ import { createUser, getUser } from './actions';
 
 export const authOptions: NextAuthOptions = {
     providers: [
-        // GoogleProvider({
-        //     clientId: '415110040833-d5fsmtghmk5jm8dk0p95buefkrt9jj5p.apps.googleusercontent.com',
-        //     clientSecret: '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'
-        // })
+        GoogleProvider({
+            clientId: '415110040833-d5fsmtghmk5jm8dk0p95buefkrt9jj5p.apps.googleusercontent.com',
+            clientSecret: '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'
+        })
     ],
     jwt: {
         encode: ({ secret, token }) => {
@@ -29,49 +29,49 @@ export const authOptions: NextAuthOptions = {
         }
     },
     theme: {
-        colorScheme: 'light',
+        colorScheme: 'dark',
         logo: 'logo.svg'
     },
-    callbacks: {
-        async session({ session }) {
-            const email = session?.user?.email as string;
+    // callbacks: {
+    //     async session({ session }) {
+    //         const email = session?.user?.email as string;
 
-            try {
-                const data = await getUser(email) as { user?: UserProfile };
+    //         try {
+    //             const data = await getUser(email) as { user?: UserProfile };
 
-                const newSession = {
-                    ...session,
-                    user: {
-                        ...session.user,
-                        ...data?.user
-                    }
-                }
+    //             const newSession = {
+    //                 ...session,
+    //                 user: {
+    //                     ...session.user,
+    //                     ...data?.user
+    //                 }
+    //             }
 
-                return newSession;
-            } catch (error) {
-                console.log('Error retrieving user data', error);
-                return session;
-            }
-        },
-        async signIn({ user }: { user: AdapterUser | User }) {
-            try {
-                const userExists = await getUser(user?.email as string) as { user?: UserProfile };
+    //             return newSession;
+    //         } catch (error) {
+    //             console.log('Error retrieving user data', error);
+    //             return session;
+    //         }
+    //     },
+    //     async signIn({ user }: { user: AdapterUser | User }) {
+    //         try {
+    //             const userExists = await getUser(user?.email as string) as { user?: UserProfile };
 
-                if (!userExists.user) {
-                    await createUser(
-                        user.name as string, 
-                        user.email as string, 
-                        user.image as string
-                    );
-                }
+    //             if (!userExists.user) {
+    //                 await createUser(
+    //                     user.name as string, 
+    //                     user.email as string, 
+    //                     user.image as string
+    //                 );
+    //             }
 
-                return true;
-            } catch (error: any) {
-                console.log(error);
-                return false;
-            }
-        }
-    }
+    //             return true;
+    //         } catch (error: any) {
+    //             console.log(error);
+    //             return false;
+    //         }
+    //     }
+    // }
 }
 
 export async function getCurrentUser() {
