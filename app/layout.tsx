@@ -3,6 +3,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Providers } from '@/components/Provider';
+import TestNav from '@/components/TestNav';
 
 export const metadata = {
     title: "Flexibble",
@@ -18,7 +19,7 @@ export default function RootLayout({
         <Providers>
             <html lang="en">
                 <body>
-                    <Navbar />
+                    <TestNav />
                     <main>
                         
                     </main>
