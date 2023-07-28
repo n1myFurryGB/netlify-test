@@ -74,7 +74,7 @@ export const authOptions: AuthOptions = {
     // }
 }
 
-export async function getCurrentUser() {
-    const session = await getServerSession(authOptions) as SessionInterface;
-    return session;
-}
+// export async function getCurrentUser() {
+//     const session = await getServerSession(authOptions) as SessionInterface;
+//     return session;
+// }

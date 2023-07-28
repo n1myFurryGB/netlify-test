@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import AuthProviders from './AuthProviders';
-import { authOptions, getCurrentUser } from '@/lib/session';
+import { authOptions } from '@/lib/session';
 import ProfileMenu from './ProfileMenu';
 import { getServerSession } from 'next-auth/next';
 
