@@ -5,7 +5,7 @@ import React from 'react';
 import AuthProviders from './AuthProviders';
 import { authOptions, getCurrentUser } from '@/lib/session';
 import ProfileMenu from './ProfileMenu';
-import { getServerSession } from 'next-auth';
+import { getServerSession } from 'next-auth/next';
 
 const Navbar = async () => {
 
@@ -31,7 +31,7 @@ const Navbar = async () => {
             </ul>
         </div>
         <div className="flexCenter gap-4">
-            {session?.user ? (
+            {/* {session?.user ? (
                 <>
                     <ProfileMenu session={session} />
                     <Link href="/create-project">
@@ -40,7 +40,7 @@ const Navbar = async () => {
                 </>
             ) : (
                 <AuthProviders />
-            )}
+            )} */}
         </div>
     </nav>
   )
