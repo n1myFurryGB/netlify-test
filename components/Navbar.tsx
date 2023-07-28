@@ -11,6 +11,12 @@ const Navbar = async () => {
 
     const session = await getServerSession(authConfig);
 
+    return (
+        <div>
+            Profile of {session?.user?.name}
+        </div>
+    )
+
   return (
     <nav className="flexBetween navbar">
         <div className="flex-1 flexStart gap-10">
