@@ -3,13 +3,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import AuthProviders from './AuthProviders';
-import { authOptions } from '@/lib/session';
+import { authConfig } from '@/lib/session';
 import ProfileMenu from './ProfileMenu';
 import { getServerSession } from 'next-auth/next';
 
 const Navbar = async () => {
 
-    //const session = await getServerSession(authOptions);
+    const session = await getServerSession(authConfig);
 
   return (
     <nav className="flexBetween navbar">
