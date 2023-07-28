@@ -9,7 +9,7 @@ import { getServerSession } from 'next-auth/next';
 
 const Navbar = async () => {
 
-    const session = await getServerSession(authOptions);
+    //const session = await getServerSession(authOptions);
 
   return (
     <nav className="flexBetween navbar">
