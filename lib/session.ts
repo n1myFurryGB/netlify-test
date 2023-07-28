@@ -1,6 +1,6 @@
-import { getServerSession } from 'next-auth/next';
+//import { getServerSession } from 'next-auth/next';
 import { AuthOptions, User } from 'next-auth';
-import { AdapterUser } from "next-auth/adapters";
+//import { AdapterUser } from "next-auth/adapters";
 import GoogleProvider from 'next-auth/providers/google';
 // import jsonwebtoken from 'jsonwebtoken';
 // import { JWT } from 'next-auth/jwt';
@@ -10,10 +10,10 @@ import GoogleProvider from 'next-auth/providers/google';
 export const authOptions: AuthOptions = {
     providers: [
         GoogleProvider({
-            clientId: '415110040833-d5fsmtghmk5jm8dk0p95buefkrt9jj5p.apps.googleusercontent.com',
-            clientSecret: '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'
+            clientId: process.env.GOOGLE_CLIENT_ID!,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET!
         })
-    ],
+    ]
     // jwt: {
     //     encode: ({ secret, token }) => {
     //         const encodedToken = jsonwebtoken.sign({
@@ -28,10 +28,10 @@ export const authOptions: AuthOptions = {
     //         return decodedToken;
     //     }
     // },
-    theme: {
-        colorScheme: 'dark',
-        logo: 'logo.svg'
-    },
+    // theme: {
+    //     colorScheme: 'dark',
+    //     logo: 'logo.svg'
+    // },
     // callbacks: {
     //     async session({ session }) {
     //         const email = session?.user?.email as string;
