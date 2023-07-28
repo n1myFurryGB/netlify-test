@@ -1,5 +1,5 @@
 import { getServerSession } from 'next-auth/next';
-import { NextAuthOptions, User } from 'next-auth';
+import { AuthOptions, User } from 'next-auth';
 import { AdapterUser } from "next-auth/adapters";
 import GoogleProvider from 'next-auth/providers/google';
 import jsonwebtoken from 'jsonwebtoken';
@@ -7,7 +7,7 @@ import { JWT } from 'next-auth/jwt';
 import { SessionInterface, UserProfile } from '@/common.types';
 import { createUser, getUser } from './actions';
 
-export const authOptions: NextAuthOptions = {
+export const authOptions: AuthOptions = {
     providers: [
         GoogleProvider({
             clientId: '415110040833-d5fsmtghmk5jm8dk0p95buefkrt9jj5p.apps.googleusercontent.com',
