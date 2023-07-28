@@ -4,12 +4,12 @@
 // import React from 'react';
 // import AuthProviders from './AuthProviders';
 // import ProfileMenu from './ProfileMenu';
-import { authConfig } from '@/lib/session';
+import { authConfigg } from '@/config/auth';
 import { getServerSession } from 'next-auth/next';
 
 const Navbar = async () => {
 
-    const session = await getServerSession(authConfig);
+    const session = await getServerSession(authConfigg);
 
     return (
         <div>
